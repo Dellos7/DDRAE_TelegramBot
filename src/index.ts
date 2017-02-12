@@ -7,7 +7,6 @@ import App from './App';
 
 debug('ts-express:server');
 
-//const port = process.env.PORT || 443; //Heroku
 const port = 443;
 App.set('port', port);
 
