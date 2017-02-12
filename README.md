@@ -5,6 +5,8 @@ DDRAE Telegram Bot
 
 A Telegram Bot which allows you to search Spanish word definitions in the official Spanish dictionary ([Diccionario de la Real Academia Española (D.R.A.E)](http://dle.rae.es/?w=diccionario)).
 
+The deployed Heroku Node.js server is the following: [https://ddrae-telegram-bot.herokuapp.com](https://ddrae-telegram-bot.herokuapp.com).
+
 ----------
 
 ### Table of contents ###

@@ -5,8 +5,8 @@ const fs = require("fs");
 const App_1 = require("./App");
 debug('ts-express:server');
 //const port = normalizePort(process.env.PORT || 3000);
-var port = process.env.PORT || 443;
-//const port = 443;
+var port = process.env.PORT || 443; //Heroku
+//const port = 443; //Local
 App_1.default.set('port', port);
 //Create the HTTPS credentials
 var key = fs.readFileSync('ssl_certs/YOURPRIVATE.key');
@@ -15,8 +15,8 @@ var credentials = {
     key: key,
     cert: cert
 };
-const server = http.createServer(App_1.default);
-//const server = https.createServer( credentials, App );
+const server = http.createServer(App_1.default); //Heroku
+//const server = https.createServer( credentials, App ); //Local
 server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
