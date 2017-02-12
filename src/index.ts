@@ -10,7 +10,7 @@ const PRODUCTION: boolean = true;
 debug('ts-express:server');
 
 //const port = normalizePort(process.env.PORT || 443);
-var port = process.env.PORT || 443; //Heroku
+var port = process.env.PORT || 80; //Heroku
 App.set('port', port);
 
 /*let server: any;
