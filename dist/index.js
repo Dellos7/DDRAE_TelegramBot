@@ -4,9 +4,8 @@ const fs = require("fs");
 const https = require("https");
 const App_1 = require("./App");
 debug('ts-express:server');
-//const port = normalizePort(process.env.PORT || 3000);
+const port = normalizePort(process.env.PORT || 3000);
 //const port = 443;
-const port = 80;
 App_1.default.set('port', port);
 //Create the HTTPS credentials
 var key = fs.readFileSync('ssl_certs/YOURPRIVATE.key');
