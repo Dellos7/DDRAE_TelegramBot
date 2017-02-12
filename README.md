@@ -19,8 +19,17 @@ A Telegram Bot which allows you to search Spanish word definitions in the offici
 
 ### Create your own DDRAE Telegram Bot ###
 
-1. Clone the repository
-2. Create a new bot through the [BotFather Bot](https://telegram.me/BotFather) ([@BotFather](https://telegram.me/BotFather)).
+1. Create a new bot through the [BotFather Bot](https://telegram.me/BotFather) ([@BotFather](https://telegram.me/BotFather)).
+2. **Clone the repository.** In order for your server to be able to start, the following need to be installed in your system:
+	- Node.js
+	- npm
+	- gulp
+	- tsc
+3. Run `npm install` in order to install all the necessary node modules. 
+4. Set your own Telegram Bot API Token in `src/utils/telegram/variables.ts` (**TELEGRAM_API_BOT_TOKEN**). 
+5. Run the server with the command `gulp nodemon` .
+6. 
+
 ## License ##
 
 [MIT License](https://opensource.org/licenses/MIT)
