@@ -1,0 +1,1 @@
+export var AUTHORIZATION_HEADER : string = "Basic cDY4MkpnaFMzOmFHZlVkQ2lFNDM0";

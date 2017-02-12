@@ -1,0 +1,2 @@
+"use strict";
+exports.TELEGRAM_API_BOT_TOKEN = "344718043:AAHPH-zBd45uKU3fqZAYoIV4f5vTlPmR1TI";

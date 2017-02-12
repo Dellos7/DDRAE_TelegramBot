@@ -1,0 +1,50 @@
+{
+  "name": "ddrae-telegram-bot",
+  "version": "1.0.0",
+  "description": "Bot para Telegram que permite hacer búsquedas de definiciones de palabras utilizando el diccionario de la RAE.",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "mocha --reporter spec --compilers ts:ts-node/register test/**/*.test.ts",
+    "start": "node dist/index.js",
+    "build": "gulp nodemon"
+  },
+  "keywords": [
+    "bot",
+    "telegram",
+    "drae",
+    "rae",
+    "lengua",
+    "española",
+    "node",
+    "nodejs",
+    "ts",
+    "typescript"
+  ],
+  "author": "David López Castellote (david.lopez.castellote@gmail.com)",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/body-parser": "0.0.33",
+    "@types/debug": "0.0.29",
+    "@types/express": "^4.0.35",
+    "@types/morgan": "^1.7.32",
+    "@types/node": "^7.0.5",
+    "chai": "^3.5.0",
+    "chai-http": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-nodemon": "^2.2.1",
+    "gulp-typescript": "^3.1.4",
+    "mocha": "^3.2.0",
+    "ts-node": "^2.1.0",
+    "typescript": "^2.1.6"
+  },
+  "dependencies": {
+    "axios": "^0.15.3",
+    "body-parser": "^1.16.1",
+    "debug": "^2.6.1",
+    "express": "^4.14.1",
+    "fs": "0.0.1-security",
+    "morgan": "^1.8.1",
+    "underscore": "^1.8.3"
+  }
+}
