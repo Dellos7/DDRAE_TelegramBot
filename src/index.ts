@@ -8,7 +8,8 @@ import App from './App';
 debug('ts-express:server');
 
 //const port = normalizePort(process.env.PORT || 3000);
-const port = 443;
+//const port = 443;
+const port = 8080;
 App.set('port', port);
 
 //Create the HTTPS credentials
