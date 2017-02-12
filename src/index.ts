@@ -5,29 +5,11 @@ import * as https from 'https';
 
 import App from './App';
 
-const PRODUCTION: boolean = true;
-
 debug('ts-express:server');
 
-//const port = normalizePort(process.env.PORT || 443);
-const port = process.env.PORT || 443; //Heroku
-//const port = 80;
+var port = process.env.PORT || 443; //Heroku
 App.set('port', port);
 
-/*let server: any;
-if( PRODUCTION ) {
-  server = http.createServer(App);
-}
-else {
-  //Create the HTTPS credentials
-  var key = fs.readFileSync( 'ssl_certs/YOURPRIVATE.key' );
-  var cert = fs.readFileSync( 'ssl_certs/YOURPUBLIC.pem' );
-  var credentials = {
-      key: key,
-      cert: cert
-  };
-  server = https.createServer( credentials, App );
-}*/
 const server = http.createServer(App);
 server.listen(port);
 server.on('error', onError);
