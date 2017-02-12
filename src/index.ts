@@ -13,7 +13,7 @@ debug('ts-express:server');
 var port = process.env.PORT || 443; //Heroku
 App.set('port', port);
 
-let server: any;
+/*let server: any;
 if( PRODUCTION ) {
   server = http.createServer(App);
 }
@@ -26,7 +26,8 @@ else {
       cert: cert
   };
   server = https.createServer( credentials, App );
-}
+}*/
+const server = http.createServer(App);
 server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
