@@ -7,7 +7,8 @@ import App from './App';
 
 debug('ts-express:server');
 
-const port = normalizePort(process.env.PORT || 3000);
+//const port = normalizePort(process.env.PORT || 3000);
+var port = process.env.PORT || 443;
 //const port = 443;
 App.set('port', port);
 
@@ -19,8 +20,8 @@ var credentials = {
     cert: cert
 };
 
-//const server = http.createServer(App);
-const server = https.createServer( credentials, App );
+const server = http.createServer(App);
+//const server = https.createServer( credentials, App );
 server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);

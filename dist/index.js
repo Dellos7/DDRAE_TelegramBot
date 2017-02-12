@@ -1,10 +1,11 @@
 "use strict";
+const http = require("http");
 const debug = require("debug");
 const fs = require("fs");
-const https = require("https");
 const App_1 = require("./App");
 debug('ts-express:server');
-const port = normalizePort(process.env.PORT || 3000);
+//const port = normalizePort(process.env.PORT || 3000);
+var port = process.env.PORT || 443;
 //const port = 443;
 App_1.default.set('port', port);
 //Create the HTTPS credentials
@@ -14,8 +15,8 @@ var credentials = {
     key: key,
     cert: cert
 };
-//const server = http.createServer(App);
-const server = https.createServer(credentials, App_1.default);
+const server = http.createServer(App_1.default);
+//const server = https.createServer( credentials, App );
 server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
