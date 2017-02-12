@@ -9,8 +9,8 @@ debug('ts-express:server');
 
 //const port = 443;
 //const port = process.env.PORT || 443; //Heroku
-var port = process.env.PORT || 80; //Heroku
-//App.set('port', port);
+const port = process.env.PORT || 443; //Heroku
+App.set('port', port);
 
 //Create the HTTPS credentials
 /*var key = fs.readFileSync( 'ssl_certs/YOURPRIVATE.key' );
@@ -21,13 +21,11 @@ var credentials = {
 };*/
 //const server = https.createServer( credentials, App );
 
-/*const server = http.createServer(App);
-server.listen(port);*/
-App.listen( port, function() {
-  console.log('Server!!! started on port ' + port);
-} );
-//server.on('error', onError);
-//server.on('listening', onListening);
+const server = http.createServer(App);
+server.listen(port);
+
+server.on('error', onError);
+server.on('listening', onListening);
 
 function normalizePort(val: number|string): number|string|boolean {
   let port: number = (typeof val === 'string') ? parseInt(val, 10) : val;
